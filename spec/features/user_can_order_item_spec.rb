@@ -7,7 +7,7 @@ describe "order flow" do
                        description: "New item description", 
                        image_url: "http://robohash.org/1.png?set=set2&bgset=bg1&size=200x200")
 
-    visit root_path
+    visit item_path(item.id)
     click_on("Purchase")
     
     expect(page).to have_content("Order: #{item.id}")  

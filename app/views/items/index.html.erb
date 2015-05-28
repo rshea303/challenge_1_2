@@ -10,9 +10,6 @@
       <h5><%= item.name %></h5>
       <%= link_to(image_tag(item.image_url), item_path(item)) %>
       <p>
-      <%= button_to "Purchase", orders_path(item_id: item.id, user_id: User.first.id) %>
-      </p>
-      <p>
         <%= item.description %>
       </p>
     </div>
