@@ -2,20 +2,20 @@
 
 <h3>Customer Info</h3>
 <p>
-  Name: <%= User.find(@order.user_id).name %>
+  Name: <%= @dashboard.user_name %>
 </p>
 <p>
-  Email: <%= User.find(@order.user_id).email %>
+  Email: <%= @dashboard.user_email %>
 </p>
 
 <h3>Order Info</h3>
 <p>
-  Item Name: <%= @order.items.first.name %>
+  Item Name: <%= @dashboard.item_name %>
 </p>
 <p>
-  Item Description: <%= @order.items.first.description %></p>
+  Item Description: <%= @dashboard.item_description %></p>
 <p>
-  <%= image_tag(@order.items.first.image_url) %>
+  <%= image_tag(@dashboard.item_image) %>
 </p>
 
 
