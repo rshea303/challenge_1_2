@@ -1,2 +1,18 @@
 <h1>Here is the new order from Storedom</h1>
 
+<h3>Customer Info</h3>
+<p>
+Name: <%= User.find(@order.user_id).name %>
+</p>
+<p>
+Email: <%= User.find(@order.user_id).email %>
+</p>
+
+<h3>Order Info</h3>
+<p>
+Item Name: <%= @order.items.first.name %>
+</p>
+<p>
+Item Description: <%= @order.items.first.description %></p>
+
+
