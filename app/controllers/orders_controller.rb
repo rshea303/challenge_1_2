@@ -13,7 +13,7 @@ class OrdersController < ApplicationController
     @order.order_items << new_order_item
     @order.save
     
-    OrderMailer.order_email(@order).deliver
+    OrderEmailWorker.perform_async(@order)
 
     redirect_to order_path(@order.id)
   end
