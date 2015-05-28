@@ -12,6 +12,9 @@ class OrdersController < ApplicationController
     new_order_item = @order.create_order_item(params[:item_id])
     @order.order_items << new_order_item
     @order.save
+    
+    OrderMailer.order_email(@order).deliver
+
     redirect_to order_path(@order.id)
   end
 end
